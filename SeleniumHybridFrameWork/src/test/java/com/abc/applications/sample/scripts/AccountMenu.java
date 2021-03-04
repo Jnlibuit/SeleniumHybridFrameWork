@@ -12,5 +12,7 @@ public class AccountMenu extends StartBrowser {
 	  CommonFunctions cfs = new CommonFunctions();
 	  cfs.NavigateToHomePage("https://www.amazon.com/");
 	  cfs.AccountMenu();
+	  
+	  Thread.sleep(2000);
   }
 }
