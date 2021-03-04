@@ -12,7 +12,7 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 
 public class ActionDriver 
 {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public ActionDriver(){
 		driver = StartBrowser.driver;
 	}
@@ -99,7 +99,7 @@ public class ActionDriver
 		return((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 	}
 	
-	public String getText(By locator) 
+	public static String getText(By locator) 
 	{
 		return driver.findElement(locator).getText();
 	}

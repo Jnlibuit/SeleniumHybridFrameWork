@@ -1,5 +1,6 @@
 package com.abc.applications.sample.scripts;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.abc.applications.sample.reuse.CommonFunctions;
@@ -13,8 +14,9 @@ public class Signin extends StartBrowser {
 	  CommonFunctions cfs = new CommonFunctions();
 	  cfs.Signin();
 	  
-
+	  String textProblem=ActionDriver.getText(com.abc.applications.sample.objectrepository.SigninPage.msgproblem);
+	  Assert.assertEquals(textProblem, "There was a problem");
 	  
-	  
+	  StartBrowser.childTest.pass("Verification done successfully on an invalid email id");
   }
 }
