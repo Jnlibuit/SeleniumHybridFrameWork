@@ -12,11 +12,19 @@ public class Signin extends StartBrowser {
   public void testSigin () throws Exception 
   {
 	  CommonFunctions cfs = new CommonFunctions();
+	  
+	  cfs.NavigateToHomePage("https://www.amazon.com/");
+	  
 	  cfs.Signin();
 	  
 	  String textProblem=ActionDriver.getText(com.abc.applications.sample.objectrepository.SigninPage.msgproblem);
 	  Assert.assertEquals(textProblem, "There was a problem");
 	  
 	  StartBrowser.childTest.pass("Verification done successfully on an invalid email id");
+	  
+	  
   }
+  
+  
+ 
 }

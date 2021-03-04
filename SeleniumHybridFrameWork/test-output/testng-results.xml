@@ -2,39 +2,39 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14499" started-at="2021-03-04T18:17:49Z" finished-at="2021-03-04T18:18:04Z">
+  <suite name="Default suite" duration-ms="9314" started-at="2021-03-04T20:11:53Z" finished-at="2021-03-04T20:12:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14499" started-at="2021-03-04T18:17:49Z" finished-at="2021-03-04T18:18:04Z">
-      <class name="com.abc.applications.sample.scripts.Signin">
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.abc.applications.sample.scripts.Signin@343f4d3d]" name="generateReport" is-config="true" duration-ms="284" started-at="2021-03-04T13:17:49Z" finished-at="2021-03-04T13:17:50Z">
+    <test name="Default test" duration-ms="9314" started-at="2021-03-04T20:11:53Z" finished-at="2021-03-04T20:12:03Z">
+      <class name="com.abc.applications.sample.scripts.AccountMenu">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.abc.applications.sample.scripts.AccountMenu@343f4d3d]" name="generateReport" is-config="true" duration-ms="353" started-at="2021-03-04T15:11:53Z" finished-at="2021-03-04T15:11:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.abc.applications.sample.scripts.Signin@343f4d3d]" name="beforeClass" is-config="true" duration-ms="2581" started-at="2021-03-04T13:17:50Z" finished-at="2021-03-04T13:17:52Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.abc.applications.sample.scripts.AccountMenu@343f4d3d]" name="beforeClass" is-config="true" duration-ms="2256" started-at="2021-03-04T15:11:54Z" finished-at="2021-03-04T15:11:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="methodName(java.lang.reflect.Method)[pri:0, instance:com.abc.applications.sample.scripts.Signin@343f4d3d]" name="methodName" is-config="true" duration-ms="3" started-at="2021-03-04T13:17:52Z" finished-at="2021-03-04T13:17:52Z">
+        <test-method status="PASS" signature="methodName(java.lang.reflect.Method)[pri:0, instance:com.abc.applications.sample.scripts.AccountMenu@343f4d3d]" name="methodName" is-config="true" duration-ms="9" started-at="2021-03-04T15:11:56Z" finished-at="2021-03-04T15:11:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.abc.applications.sample.scripts.Signin.testSigin() throws java.lang.Exception]]>
+                <![CDATA[public void com.abc.applications.sample.scripts.AccountMenu.testAccountMenu() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodName -->
-        <test-method status="PASS" signature="testSigin()[pri:0, instance:com.abc.applications.sample.scripts.Signin@343f4d3d]" name="testSigin" duration-ms="10273" started-at="2021-03-04T13:17:52Z" finished-at="2021-03-04T13:18:03Z">
+        <test-method status="PASS" signature="testAccountMenu()[pri:0, instance:com.abc.applications.sample.scripts.AccountMenu@343f4d3d]" name="testAccountMenu" duration-ms="5354" started-at="2021-03-04T15:11:56Z" finished-at="2021-03-04T15:12:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSigin -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.abc.applications.sample.scripts.Signin@343f4d3d]" name="afterClass" is-config="true" duration-ms="1334" started-at="2021-03-04T13:18:03Z" finished-at="2021-03-04T13:18:04Z">
+        </test-method> <!-- testAccountMenu -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.abc.applications.sample.scripts.AccountMenu@343f4d3d]" name="afterClass" is-config="true" duration-ms="1303" started-at="2021-03-04T15:12:01Z" finished-at="2021-03-04T15:12:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.abc.applications.sample.scripts.Signin -->
+      </class> <!-- com.abc.applications.sample.scripts.AccountMenu -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
