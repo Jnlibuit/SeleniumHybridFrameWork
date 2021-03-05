@@ -1,5 +1,7 @@
 package com.abc.wdcmds;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,8 +21,9 @@ public class ActionDriver
 	/**
 	 * Used to navigate to a given URL
 	 * @param url -- https://www.google.com/
+	 * @throws Exception 
 	 */
-	public void navigateToApplication(String url)
+	public void navigateToApplication(String url) throws Exception
 	{
 
 		try {
@@ -28,7 +31,10 @@ public class ActionDriver
 			StartBrowser.childTest.pass("Successfully Navigated to :"+url);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.pass("Unable to Navigated to :"+url);
+			StartBrowser.childTest.fail("Unable to Navigated to :"+url,
+					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
+			StartBrowser.childTest.info(e);
+			throw e;
 		}
 	}
 
@@ -46,20 +52,20 @@ public class ActionDriver
 			StartBrowser.childTest.pass("Successfully Navigated to :"+eleName);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.pass("Unable to Navigated to :"+eleName,
+			StartBrowser.childTest.fail("Unable to Navigated to :"+eleName,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);
 			throw e;
 
 		}
 	}
-/**
- * Used to type in textboxes or text areas
- * @param locator -- Get it from Object repository
- * @param testData -- what you want to type in text box
- * @param eleName -- Name of the element o which you are performing action ex: userName text box
- * @throws Exception
- */
+	/**
+	 * Used to type in textboxes or text areas
+	 * @param locator -- Get it from Object repository
+	 * @param testData -- what you want to type in text box
+	 * @param eleName -- Name of the element o which you are performing action ex: userName text box
+	 * @throws Exception
+	 */
 	public void type(By locator, String testData, String eleName) throws Exception
 	{
 
@@ -68,7 +74,7 @@ public class ActionDriver
 			StartBrowser.childTest.pass("Successfully performed type action in : "+eleName + " With Data "+testData);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.pass("Unable to perform type action in :"+eleName + " With Data "+testData,
+			StartBrowser.childTest.fail("Unable to perform type action in :"+eleName + " With Data "+testData,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);		
 			throw e;
@@ -85,20 +91,20 @@ public class ActionDriver
 			StartBrowser.childTest.pass("Successfully performed mousehover on:"+eleName);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.pass("Unable to perform type action in : to :"+eleName,
+			StartBrowser.childTest.fail("Unable to perform type action in : to :"+eleName,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);		
 			throw e;
 		}
 	}
-	
-	
-	
+
+
+
 	public String screenShot()
 	{
 		return((TakesScreenshot)driver).getScreenshotAs(OutputType.BASE64);
 	}
-	
+
 	public static String getText(By locator) 
 	{
 		return driver.findElement(locator).getText();

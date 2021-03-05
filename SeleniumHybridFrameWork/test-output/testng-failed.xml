@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.abc.applications.sample.scripts.AccountMenu">
+      <class name="com.abc.applications.sample.scripts.Signin">
         <methods>
-          <include name="testAccountMenu"/>
+          <include name="methodName"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="generateReport"/>
+          <include name="testSigin"/>
         </methods>
-      </class> <!-- com.abc.applications.sample.scripts.AccountMenu -->
+      </class> <!-- com.abc.applications.sample.scripts.Signin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
