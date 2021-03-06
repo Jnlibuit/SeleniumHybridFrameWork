@@ -28,10 +28,10 @@ public class ActionDriver
 
 		try {
 			driver.get(url);
-			StartBrowser.childTest.pass("Successfully Navigated to :"+url);
+			StartBrowser.childTest.pass("Successfully navigated to :"+url);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.fail("Unable to Navigated to :"+url,
+			StartBrowser.childTest.fail("Unable to navigated to :"+url,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);
 			throw e;
@@ -49,10 +49,10 @@ public class ActionDriver
 
 		try {
 			driver.findElement(locator).click();
-			StartBrowser.childTest.pass("Successfully Navigated to :"+eleName);
+			StartBrowser.childTest.pass("Successfully clicked :"+eleName);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.fail("Unable to Navigated to :"+eleName,
+			StartBrowser.childTest.fail("Unable to click :"+eleName,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);
 			throw e;
@@ -91,7 +91,7 @@ public class ActionDriver
 			StartBrowser.childTest.pass("Successfully performed mousehover on:"+eleName);
 		}
 		catch(Exception e) {
-			StartBrowser.childTest.fail("Unable to perform type action in : to :"+eleName,
+			StartBrowser.childTest.fail("Unable to perform mousehover on : to :"+eleName,
 					MediaEntityBuilder.createScreenCaptureFromBase64String(screenShot()).build());
 			StartBrowser.childTest.info(e);		
 			throw e;
